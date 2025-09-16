@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Realizado - Sistema Goat</title>
+    <link rel="stylesheet" href="css/sucesso.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="success-container">
+            <!-- Ícone de sucesso animado -->
+            <div class="success-icon">
+                <div class="checkmark-circle">
+                    <div class="checkmark"></div>
+                </div>
+            </div>
+            
+            <!-- Conteúdo principal -->
+            <div class="success-content">
+                <h1><i class="fas fa-graduation-cap"></i> Sistema Goat</h1>
+                <h2>Cadastro Realizado com Sucesso!</h2>
+                
+                <div class="success-message">
+                    <p>🎉 Parabéns! Sua conta foi criada com sucesso.</p>
+                    <p>Você já pode acessar os grupos de estudo da universidade.</p>
+                </div>
+                
+                <!-- Informações do usuário -->
+                <div class="user-info">
+                    <h3>Informações do Cadastro:</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>E-mail: <strong id="userEmail">carregando...</strong></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Data: <strong id="currentDate">carregando...</strong></span>
+                    </div>
+                </div>
+                
+                <!-- Status do email -->
+                <div class="email-status">
+                    <div class="email-notification">
+                        <i class="fas fa-paper-plane"></i>
+                        <div class="email-text">
+                            <h4>E-mail de Confirmação Enviado</h4>
+                            <p>Verifique sua caixa de entrada e spam. O e-mail pode levar alguns minutos para chegar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="email-actions">
+                        <button id="resendEmail" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i>
+                            Reenviar E-mail
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Próximos passos -->
+                <div class="next-steps">
+                    <h3>Próximos Passos:</h3>
+                    <div class="steps-list">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Confirme seu E-mail</h4>
+                                <p>Clique no link enviado para seu e-mail institucional</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Faça Login</h4>
+                                <p>Use suas credenciais para acessar o sistema</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Explore os Grupos</h4>
+                                <p>Encontre e participe de grupos de estudo do seu curso</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botões de ação -->
+                <div class="action-buttons">
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Fazer Login
+                    </a>
+                    
+                    <a href="index.html" class="btn btn-outline">
+                        <i class="fas fa-home"></i>
+                        Voltar ao Início
+                    </a>
+                </div>
+                
+                <!-- Informações de suporte -->
+                <div class="support-info">
+                    <p>Problemas com o cadastro?</p>
+                    <a href="mailto:suporte@universidade.edu.br" class="support-link">
+                        <i class="fas fa-envelope"></i>
+                        Entre em contato conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Loading para reenvio de email -->
+        <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+            <div class="loading-content">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Reenviando e-mail...</p>
+            </div>
+        </div>
+        
+        <!-- Mensagem de feedback -->
+        <div class="toast" id="toast" style="display: none;">
+            <div class="toast-content">
+                <i class="fas fa-check-circle"></i>
+                <span id="toastMessage">E-mail reenviado com sucesso!</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/sucesso.js"></script>
+</body>
+</html>
